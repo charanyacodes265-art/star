@@ -11,7 +11,7 @@ if (!container) throw new Error("Container not found");
 async function loadJsonl(path: string) {
   const res = await fetch(path);
   const text = await res.text();
-  return text.split("\n").filter(Boolean).map(JSON.parse);
+  return text.split("\n").filter(Boolean).map((line) => JSON.parse(line));
 }
 
 async function loadAllJsonl(folder: string, files: string[]) {

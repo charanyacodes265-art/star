@@ -17,6 +17,19 @@ type SalesOrder = {
   salesOrder: string;
   soldToParty: string;
 };
+
+type BillingHeader = {
+  billingDocument: string;
+  accountingDocument: string;
+  [key: string]: any;
+};
+
+type Payment = {
+  accountingDocument: string;
+  invoiceReference: string;
+  [key: string]: any;
+};
+
 const graph = new Graph();
 
 const container = document.getElementById("container") as HTMLElement;
@@ -197,107 +210,107 @@ async function main() {
     // DELIVERY
     const deliveries = deliveryMap.get(soId) || [];
 
-    deliveries.forEach((d) => {
+    deliveries.forEach((d: DeliveryItem) => {
       const delId = d.deliveryDocument;
 
       if (!graph.hasNode(delId)) {
-        const pos = getRingPosition(
-          deliveryIndex++,
-          deliveryItems.length,
-          RADIUS.delivery
-        );
+      const pos = getRingPosition(
+        deliveryIndex++,
+        deliveryItems.length,
+        RADIUS.delivery
+      );
 
-        graph.addNode(delId, {
-          label: "DEL " + delId,
-          x: pos.x,
-          y: pos.y,
-          size: 5,
-          color: "#f59e0b",
-        });
+      graph.addNode(delId, {
+        label: "DEL " + delId,
+        x: pos.x,
+        y: pos.y,
+        size: 5,
+        color: "#f59e0b",
+      });
       }
 
       if (!graph.hasEdge(soId, delId)) {
-        graph.addEdge(soId, delId);
+      graph.addEdge(soId, delId);
       }
 
       // BILLING
       const billings = billingMap.get(delId) || [];
 
-      billings.forEach((b) => {
-        const billId = b.billingDocument;
+      billings.forEach((b: BillingItem) => {
+      const billId = b.billingDocument;
 
-        if (!graph.hasNode(billId)) {
+      if (!graph.hasNode(billId)) {
+        const pos = getRingPosition(
+        billingIndex++,
+        billingItems.length,
+        RADIUS.billing
+        );
+
+        graph.addNode(billId, {
+        label: "BILL " + billId,
+        x: pos.x,
+        y: pos.y,
+        size: 5,
+        color: "#ef4444",
+        });
+      }
+
+      if (!graph.hasEdge(delId, billId)) {
+        graph.addEdge(delId, billId);
+      }
+
+      // ACCOUNTING
+      const header = billingHeaderMap.get(billId) as BillingHeader;
+      const accId = header?.accountingDocument;
+
+      if (accId) {
+        if (!graph.hasNode(accId)) {
+        const pos = getRingPosition(
+          accountingIndex++,
+          accounting.length,
+          RADIUS.accounting
+        );
+
+        graph.addNode(accId, {
+          label: "ACC " + accId,
+          x: pos.x,
+          y: pos.y,
+          size: 4,
+          color: "#8b5cf6",
+        });
+        }
+
+        if (!graph.hasEdge(billId, accId)) {
+        graph.addEdge(billId, accId);
+        }
+
+        // PAYMENT
+        const payment = paymentMap.get(accId) as Payment;
+
+        if (payment) {
+        const payId = payment.accountingDocument;
+
+        if (!graph.hasNode(payId)) {
           const pos = getRingPosition(
-            billingIndex++,
-            billingItems.length,
-            RADIUS.billing
+          paymentIndex++,
+          payments.length,
+          RADIUS.payment
           );
 
-          graph.addNode(billId, {
-            label: "BILL " + billId,
-            x: pos.x,
-            y: pos.y,
-            size: 5,
-            color: "#ef4444",
+          graph.addNode(payId, {
+          label: "PAY " + payId,
+          x: pos.x,
+          y: pos.y,
+          size: 4,
+          color: "#10b981",
           });
         }
 
-        if (!graph.hasEdge(delId, billId)) {
-          graph.addEdge(delId, billId);
+        if (!graph.hasEdge(accId, payId)) {
+          graph.addEdge(accId, payId);
         }
-
-        // ACCOUNTING
-        const header = billingHeaderMap.get(billId);
-        const accId = header?.accountingDocument;
-
-        if (accId) {
-          if (!graph.hasNode(accId)) {
-            const pos = getRingPosition(
-              accountingIndex++,
-              accounting.length,
-              RADIUS.accounting
-            );
-
-            graph.addNode(accId, {
-              label: "ACC " + accId,
-              x: pos.x,
-              y: pos.y,
-              size: 4,
-              color: "#8b5cf6",
-            });
-          }
-
-          if (!graph.hasEdge(billId, accId)) {
-            graph.addEdge(billId, accId);
-          }
-
-          // PAYMENT
-          const payment = paymentMap.get(accId);
-
-          if (payment) {
-            const payId = payment.accountingDocument;
-
-            if (!graph.hasNode(payId)) {
-              const pos = getRingPosition(
-                paymentIndex++,
-                payments.length,
-                RADIUS.payment
-              );
-
-              graph.addNode(payId, {
-                label: "PAY " + payId,
-                x: pos.x,
-                y: pos.y,
-                size: 4,
-                color: "#10b981",
-              });
-            }
-
-            if (!graph.hasEdge(accId, payId)) {
-              graph.addEdge(accId, payId);
-            }
-          }
         }
+      }
       });
     });
   });

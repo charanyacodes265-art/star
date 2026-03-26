@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Orders Graph</title>
+  <style>
+    #container {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+
+  <script type="module">
+    import Graph from "https://cdn.skypack.dev/graphology";
+    import Sigma from "https://cdn.skypack.dev/sigma";
+
+    const graph = new Graph();
+
+    function addNode(id, label, type) {
+      if (!graph.hasNode(id)) {
+        graph.addNode(id, {
+          label,
+          size: 5,
+          type
+        });
+      }
+    }
+
+    function addEdge(source, target, label) {
+      const key = `${source}-${target}-${label}`;
+      if (!graph.hasEdge(key)) {
+        graph.addEdgeWithKey(key, source, target, { label });
+      }
+    }
+
+    async function loadJSONL(url) {
+      const res = await fetch(url);
+      const text = await res.text();
+
+      return text
+        .split("\n")
+        .filter(line => line.trim())
+        .map(line => JSON.parse(line));
+    }
+
+    async function buildOrdersGraph() {
+      const headers = await loadJSONL("/sales_order_headers.jsonl");
+      const items = await loadJSONL("/sales_order_items.jsonl");
+
+      // ⚠️ LIMIT for demo (avoid crashing)
+      headers.slice(0, 500).forEach(h => {
+        const so = `SO_${h.salesOrder}`;
+        const cust = `CUST_${h.soldToParty}`;
+
+        addNode(so, h.salesOrder, "order");
+        addNode(cust, h.soldToParty, "customer");
+
+        addEdge(cust, so, "places");
+      });
+
+      items.slice(0, 1000).forEach(i => {
+        const so = `SO_${i.salesOrder}`;
+        const prod = `PROD_${i.material}`;
+
+        addNode(prod, i.material, "product");
+        addEdge(so, prod, "orders");
+      });
+    }
+
+    function colorize() {
+      const colors = {
+        order: "#1f77b4",
+        customer: "#d62728",
+        product: "#2ca02c"
+      };
+
+      graph.forEachNode((node, attrs) => {
+        graph.setNodeAttribute(node, "color", colors[attrs.type]);
+      });
+    }
+
+    async function main() {
+      await buildOrdersGraph();
+      colorize();
+
+      new Sigma(graph, document.getElementById("container"));
+    }
+
+    main();
+  </script>
+</body>
+</html>

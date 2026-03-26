@@ -1,9 +1,26 @@
 import Graph from "graphology";
 import Sigma from "sigma";
 
+
+
+type DeliveryItem = {
+  deliveryDocument: string;
+  referenceSdDocument: string;
+};
+
+type BillingItem = {
+  billingDocument: string;
+  referenceSdDocument: string;
+};
+
+type SalesOrder = {
+  salesOrder: string;
+  soldToParty: string;
+};
 const graph = new Graph();
 
-const container = document.getElementById("container");
+const container = document.getElementById("container") as HTMLElement;
+
 if (!container) throw new Error("Container not found");
 
 // -------------------- LOADERS --------------------
@@ -50,7 +67,7 @@ async function main() {
   // Load ALL data
   const salesOrders = await loadJsonl(
     "/sap-o2c-data/sales_order_headers/part-20251119-133429-440.jsonl"
-  );
+  ) as SalesOrder[]
 
   const bpData = await loadJsonl(
     "/sap-o2c-data/business_partners/part-20251119-133435-168.jsonl"
@@ -59,12 +76,12 @@ async function main() {
   const deliveryItems = await loadAllJsonl("outbound_delivery_items", [
     "part-20251119-133431-439.jsonl",
     "part-20251119-133431-626.jsonl",
-  ]);
+  ]) as DeliveryItem[];
 
   const billingItems = await loadAllJsonl("billing_document_items", [
     "part-20251119-133432-233.jsonl",
     "part-20251119-133432-978.jsonl",
-  ]);
+  ]) as BillingItem[];
 
   const billingHeaders = await loadAllJsonl("billing_document_headers", [
     "part-20251119-133433-228.jsonl",

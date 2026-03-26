@@ -1,0 +1,166 @@
+Folder: billing_document_cancellations
+  File: part-20251119-133433-51.jsonl
+    Unique keys: accountingDocument, billingDocument, billingDocumentDate, billingDocumentIsCancelled, billingDocumentType, cancelledBillingDocument, companyCode, creationDate, creationTime, fiscalYear, lastChangeDateTime, soldToParty, totalNetAmount, transactionCurrency
+    Sample keys (first object): billingDocument, billingDocumentType, creationDate, creationTime, lastChangeDateTime, billingDocumentDate, billingDocumentIsCancelled, cancelledBillingDocument, totalNetAmount, transactionCurrency, companyCode, fiscalYear, accountingDocument, soldToParty
+Folder: billing_document_headers
+  File: part-20251119-133433-228.jsonl
+    Unique keys: accountingDocument, billingDocument, billingDocumentDate, billingDocumentIsCancelled, billingDocumentType, cancelledBillingDocument, companyCode, creationDate, creationTime, fiscalYear, lastChangeDateTime, soldToParty, totalNetAmount, transactionCurrency
+    Sample keys (first object): billingDocument, billingDocumentType, creationDate, creationTime, lastChangeDateTime, billingDocumentDate, billingDocumentIsCancelled, cancelledBillingDocument, totalNetAmount, transactionCurrency, companyCode, fiscalYear, accountingDocument, soldToParty
+  File: part-20251119-133433-936.jsonl
+    Unique keys: accountingDocument, billingDocument, billingDocumentDate, billingDocumentIsCancelled, billingDocumentType, cancelledBillingDocument, companyCode, creationDate, creationTime, fiscalYear, lastChangeDateTime, soldToParty, totalNetAmount, transactionCurrency
+    Sample keys (first object): billingDocument, billingDocumentType, creationDate, creationTime, lastChangeDateTime, billingDocumentDate, billingDocumentIsCancelled, cancelledBillingDocument, totalNetAmount, transactionCurrency, companyCode, fiscalYear, accountingDocument, soldToParty
+Folder: billing_document_items
+  File: part-20251119-133432-233.jsonl
+    Unique keys: billingDocument, billingDocumentItem, billingQuantity, billingQuantityUnit, material, netAmount, referenceSdDocument, referenceSdDocumentItem, transactionCurrency
+    Sample keys (first object): billingDocument, billingDocumentItem, material, billingQuantity, billingQuantityUnit, netAmount, transactionCurrency, referenceSdDocument, referenceSdDocumentItem
+  File: part-20251119-133432-978.jsonl
+    Unique keys: billingDocument, billingDocumentItem, billingQuantity, billingQuantityUnit, material, netAmount, referenceSdDocument, referenceSdDocumentItem, transactionCurrency
+    Sample keys (first object): billingDocument, billingDocumentItem, material, billingQuantity, billingQuantityUnit, netAmount, transactionCurrency, referenceSdDocument, referenceSdDocumentItem
+Folder: business_partner_addresses
+  File: part-20251119-133436-580.jsonl
+    Unique keys: addressId, addressTimeZone, addressUuid, businessPartner, cityName, country, poBox, poBoxDeviatingCityName, poBoxDeviatingCountry, poBoxDeviatingRegion, poBoxIsWithoutNumber, poBoxLobbyName, poBoxPostalCode, postalCode, region, streetName, taxJurisdiction, transportZone, validityEndDate, validityStartDate
+    Sample keys (first object): businessPartner, addressId, validityStartDate, validityEndDate, addressUuid, addressTimeZone, cityName, country, poBox, poBoxDeviatingCityName, poBoxDeviatingCountry, poBoxDeviatingRegion, poBoxIsWithoutNumber, poBoxLobbyName, poBoxPostalCode, postalCode, region, streetName, taxJurisdiction, transportZone
+Folder: business_partners
+  File: part-20251119-133435-168.jsonl
+    Unique keys: businessPartner, businessPartnerCategory, businessPartnerFullName, businessPartnerGrouping, businessPartnerIsBlocked, businessPartnerName, correspondenceLanguage, createdByUser, creationDate, creationTime, customer, firstName, formOfAddress, industry, isMarkedForArchiving, lastChangeDate, lastName, organizationBpName1, organizationBpName2
+    Sample keys (first object): businessPartner, customer, businessPartnerCategory, businessPartnerFullName, businessPartnerGrouping, businessPartnerName, correspondenceLanguage, createdByUser, creationDate, creationTime, firstName, formOfAddress, industry, lastChangeDate, lastName, organizationBpName1, organizationBpName2, businessPartnerIsBlocked, isMarkedForArchiving
+Folder: customer_company_assignments
+  File: part-20251119-133436-59.jsonl
+    Unique keys: accountingClerk, accountingClerkFaxNumber, accountingClerkInternetAddress, accountingClerkPhoneNumber, alternativePayerAccount, companyCode, customer, customerAccountGroup, deletionIndicator, paymentBlockingReason, paymentMethodsList, paymentTerms, reconciliationAccount
+    Sample keys (first object): customer, companyCode, accountingClerk, accountingClerkFaxNumber, accountingClerkInternetAddress, accountingClerkPhoneNumber, alternativePayerAccount, paymentBlockingReason, paymentMethodsList, paymentTerms, reconciliationAccount, deletionIndicator, customerAccountGroup
+Folder: customer_sales_area_assignments
+  File: part-20251119-133437-884.jsonl
+    Unique keys: billingIsBlockedForCustomer, completeDeliveryIsDefined, creditControlArea, currency, customer, customerPaymentTerms, deliveryPriority, distributionChannel, division, exchangeRateType, incotermsClassification, incotermsLocation1, salesDistrict, salesGroup, salesOffice, salesOrganization, shippingCondition, slsUnlmtdOvrdelivIsAllwd, supplyingPlant
+    Sample keys (first object): customer, salesOrganization, distributionChannel, division, billingIsBlockedForCustomer, completeDeliveryIsDefined, creditControlArea, currency, customerPaymentTerms, deliveryPriority, incotermsClassification, incotermsLocation1, salesGroup, salesOffice, shippingCondition, slsUnlmtdOvrdelivIsAllwd, supplyingPlant, salesDistrict, exchangeRateType
+Folder: journal_entry_items_accounts_receivable
+  File: part-20251119-133433-74.jsonl
+    Unique keys: accountingDocument, accountingDocumentItem, accountingDocumentType, amountInCompanyCodeCurrency, amountInTransactionCurrency, assignmentReference, clearingAccountingDocument, clearingDate, clearingDocFiscalYear, companyCode, companyCodeCurrency, costCenter, customer, documentDate, financialAccountType, fiscalYear, glAccount, lastChangeDateTime, postingDate, profitCenter, referenceDocument, transactionCurrency
+    Sample keys (first object): companyCode, fiscalYear, accountingDocument, glAccount, referenceDocument, costCenter, profitCenter, transactionCurrency, amountInTransactionCurrency, companyCodeCurrency, amountInCompanyCodeCurrency, postingDate, documentDate, accountingDocumentType, accountingDocumentItem, assignmentReference, lastChangeDateTime, customer, financialAccountType, clearingDate, clearingAccountingDocument, clearingDocFiscalYear
+  File: part-20251119-133434-273.jsonl
+    Unique keys: accountingDocument, accountingDocumentItem, accountingDocumentType, amountInCompanyCodeCurrency, amountInTransactionCurrency, assignmentReference, clearingAccountingDocument, clearingDate, clearingDocFiscalYear, companyCode, companyCodeCurrency, costCenter, customer, documentDate, financialAccountType, fiscalYear, glAccount, lastChangeDateTime, postingDate, profitCenter, referenceDocument, transactionCurrency
+    Sample keys (first object): companyCode, fiscalYear, accountingDocument, glAccount, referenceDocument, costCenter, profitCenter, transactionCurrency, amountInTransactionCurrency, companyCodeCurrency, amountInCompanyCodeCurrency, postingDate, documentDate, accountingDocumentType, accountingDocumentItem, assignmentReference, lastChangeDateTime, customer, financialAccountType, clearingDate, clearingAccountingDocument, clearingDocFiscalYear
+  File: part-20251119-133434-581.jsonl
+    Unique keys: accountingDocument, accountingDocumentItem, accountingDocumentType, amountInCompanyCodeCurrency, amountInTransactionCurrency, assignmentReference, clearingAccountingDocument, clearingDate, clearingDocFiscalYear, companyCode, companyCodeCurrency, costCenter, customer, documentDate, financialAccountType, fiscalYear, glAccount, lastChangeDateTime, postingDate, profitCenter, referenceDocument, transactionCurrency
+    Sample keys (first object): companyCode, fiscalYear, accountingDocument, glAccount, referenceDocument, costCenter, profitCenter, transactionCurrency, amountInTransactionCurrency, companyCodeCurrency, amountInCompanyCodeCurrency, postingDate, documentDate, accountingDocumentType, accountingDocumentItem, assignmentReference, lastChangeDateTime, customer, financialAccountType, clearingDate, clearingAccountingDocument, clearingDocFiscalYear
+  File: part-20251119-133434-669.jsonl
+    Unique keys: accountingDocument, accountingDocumentItem, accountingDocumentType, amountInCompanyCodeCurrency, amountInTransactionCurrency, assignmentReference, clearingAccountingDocument, clearingDate, clearingDocFiscalYear, companyCode, companyCodeCurrency, costCenter, customer, documentDate, financialAccountType, fiscalYear, glAccount, lastChangeDateTime, postingDate, profitCenter, referenceDocument, transactionCurrency
+    Sample keys (first object): companyCode, fiscalYear, accountingDocument, glAccount, referenceDocument, costCenter, profitCenter, transactionCurrency, amountInTransactionCurrency, companyCodeCurrency, amountInCompanyCodeCurrency, postingDate, documentDate, accountingDocumentType, accountingDocumentItem, assignmentReference, lastChangeDateTime, customer, financialAccountType, clearingDate, clearingAccountingDocument, clearingDocFiscalYear
+Folder: outbound_delivery_headers
+  File: part-20251119-133431-414.jsonl
+    Unique keys: actualGoodsMovementDate, actualGoodsMovementTime, creationDate, creationTime, deliveryBlockReason, deliveryDocument, hdrGeneralIncompletionStatus, headerBillingBlockReason, lastChangeDate, overallGoodsMovementStatus, overallPickingStatus, overallProofOfDeliveryStatus, shippingPoint
+    Sample keys (first object): actualGoodsMovementDate, actualGoodsMovementTime, creationDate, creationTime, deliveryBlockReason, deliveryDocument, hdrGeneralIncompletionStatus, headerBillingBlockReason, lastChangeDate, overallGoodsMovementStatus, overallPickingStatus, overallProofOfDeliveryStatus, shippingPoint
+Folder: outbound_delivery_items
+  File: part-20251119-133431-439.jsonl
+    Unique keys: actualDeliveryQuantity, batch, deliveryDocument, deliveryDocumentItem, deliveryQuantityUnit, itemBillingBlockReason, lastChangeDate, plant, referenceSdDocument, referenceSdDocumentItem, storageLocation
+    Sample keys (first object): actualDeliveryQuantity, batch, deliveryDocument, deliveryDocumentItem, deliveryQuantityUnit, itemBillingBlockReason, lastChangeDate, plant, referenceSdDocument, referenceSdDocumentItem, storageLocation
+  File: part-20251119-133431-626.jsonl
+    Unique keys: actualDeliveryQuantity, batch, deliveryDocument, deliveryDocumentItem, deliveryQuantityUnit, itemBillingBlockReason, lastChangeDate, plant, referenceSdDocument, referenceSdDocumentItem, storageLocation
+    Sample keys (first object): actualDeliveryQuantity, batch, deliveryDocument, deliveryDocumentItem, deliveryQuantityUnit, itemBillingBlockReason, lastChangeDate, plant, referenceSdDocument, referenceSdDocumentItem, storageLocation
+Folder: payments_accounts_receivable
+  File: part-20251119-133434-100.jsonl
+    Unique keys: accountingDocument, accountingDocumentItem, amountInCompanyCodeCurrency, amountInTransactionCurrency, assignmentReference, clearingAccountingDocument, clearingDate, clearingDocFiscalYear, companyCode, companyCodeCurrency, costCenter, customer, documentDate, financialAccountType, fiscalYear, glAccount, invoiceReference, invoiceReferenceFiscalYear, postingDate, profitCenter, salesDocument, salesDocumentItem, transactionCurrency
+    Sample keys (first object): companyCode, fiscalYear, accountingDocument, accountingDocumentItem, clearingDate, clearingAccountingDocument, clearingDocFiscalYear, amountInTransactionCurrency, transactionCurrency, amountInCompanyCodeCurrency, companyCodeCurrency, customer, invoiceReference, invoiceReferenceFiscalYear, salesDocument, salesDocumentItem, postingDate, documentDate, assignmentReference, glAccount, financialAccountType, profitCenter, costCenter
+Folder: plants
+  File: part-20251119-133445-279.jsonl
+    Unique keys: addressId, defaultPurchasingOrganization, distributionChannel, division, factoryCalendar, isMarkedForArchiving, language, plant, plantCategory, plantCustomer, plantName, plantSupplier, salesOrganization, valuationArea
+    Sample keys (first object): plant, plantName, valuationArea, plantCustomer, plantSupplier, factoryCalendar, defaultPurchasingOrganization, salesOrganization, addressId, plantCategory, distributionChannel, division, language, isMarkedForArchiving
+Folder: product_descriptions
+  File: part-20251119-133438-106.jsonl
+    Unique keys: language, product, productDescription
+    Sample keys (first object): product, language, productDescription
+  File: part-20251119-133438-991.jsonl
+    Unique keys: language, product, productDescription
+    Sample keys (first object): product, language, productDescription
+Folder: product_plants
+  File: part-20251119-133439-232.jsonl
+    Unique keys: availabilityCheckType, countryOfOrigin, fiscalYearVariant, mrpType, plant, product, productionInvtryManagedLoc, profitCenter, regionOfOrigin
+    Sample keys (first object): product, plant, countryOfOrigin, regionOfOrigin, productionInvtryManagedLoc, availabilityCheckType, fiscalYearVariant, profitCenter, mrpType
+  File: part-20251119-133439-488.jsonl
+    Unique keys: availabilityCheckType, countryOfOrigin, fiscalYearVariant, mrpType, plant, product, productionInvtryManagedLoc, profitCenter, regionOfOrigin
+    Sample keys (first object): product, plant, countryOfOrigin, regionOfOrigin, productionInvtryManagedLoc, availabilityCheckType, fiscalYearVariant, profitCenter, mrpType
+  File: part-20251119-133439-814.jsonl
+    Unique keys: availabilityCheckType, countryOfOrigin, fiscalYearVariant, mrpType, plant, product, productionInvtryManagedLoc, profitCenter, regionOfOrigin
+    Sample keys (first object): product, plant, countryOfOrigin, regionOfOrigin, productionInvtryManagedLoc, availabilityCheckType, fiscalYearVariant, profitCenter, mrpType
+  File: part-20251119-133440-467.jsonl
+    Unique keys: availabilityCheckType, countryOfOrigin, fiscalYearVariant, mrpType, plant, product, productionInvtryManagedLoc, profitCenter, regionOfOrigin
+    Sample keys (first object): product, plant, countryOfOrigin, regionOfOrigin, productionInvtryManagedLoc, availabilityCheckType, fiscalYearVariant, profitCenter, mrpType
+Folder: product_storage_locations
+  File: part-20251119-133440-440.jsonl
+    Unique keys: dateOfLastPostedCntUnRstrcdStk, physicalInventoryBlockInd, plant, product, storageLocation
+    Sample keys (first object): product, plant, storageLocation, physicalInventoryBlockInd, dateOfLastPostedCntUnRstrcdStk
+  File: part-20251119-133440-895.jsonl
+    Unique keys: dateOfLastPostedCntUnRstrcdStk, physicalInventoryBlockInd, plant, product, storageLocation
+    Sample keys (first object): product, plant, storageLocation, physicalInventoryBlockInd, dateOfLastPostedCntUnRstrcdStk
+  File: part-20251119-133441-19.jsonl
+    Unique keys: dateOfLastPostedCntUnRstrcdStk, physicalInventoryBlockInd, plant, product, storageLocation
+    Sample keys (first object): product, plant, storageLocation, physicalInventoryBlockInd, dateOfLastPostedCntUnRstrcdStk
+  File: part-20251119-133441-417.jsonl
+    Unique keys: dateOfLastPostedCntUnRstrcdStk, physicalInventoryBlockInd, plant, product, storageLocation
+    Sample keys (first object): product, plant, storageLocation, physicalInventoryBlockInd, dateOfLastPostedCntUnRstrcdStk
+  File: part-20251119-133441-547.jsonl
+    Unique keys: dateOfLastPostedCntUnRstrcdStk, physicalInventoryBlockInd, plant, product, storageLocation
+    Sample keys (first object): product, plant, storageLocation, physicalInventoryBlockInd, dateOfLastPostedCntUnRstrcdStk
+  File: part-20251119-133441-889.jsonl
+    Unique keys: dateOfLastPostedCntUnRstrcdStk, physicalInventoryBlockInd, plant, product, storageLocation
+    Sample keys (first object): product, plant, storageLocation, physicalInventoryBlockInd, dateOfLastPostedCntUnRstrcdStk
+  File: part-20251119-133442-116.jsonl
+    Unique keys: dateOfLastPostedCntUnRstrcdStk, physicalInventoryBlockInd, plant, product, storageLocation
+    Sample keys (first object): product, plant, storageLocation, physicalInventoryBlockInd, dateOfLastPostedCntUnRstrcdStk
+  File: part-20251119-133442-150.jsonl
+    Unique keys: dateOfLastPostedCntUnRstrcdStk, physicalInventoryBlockInd, plant, product, storageLocation
+    Sample keys (first object): product, plant, storageLocation, physicalInventoryBlockInd, dateOfLastPostedCntUnRstrcdStk
+  File: part-20251119-133442-95.jsonl
+    Unique keys: dateOfLastPostedCntUnRstrcdStk, physicalInventoryBlockInd, plant, product, storageLocation
+    Sample keys (first object): product, plant, storageLocation, physicalInventoryBlockInd, dateOfLastPostedCntUnRstrcdStk
+  File: part-20251119-133442-967.jsonl
+    Unique keys: dateOfLastPostedCntUnRstrcdStk, physicalInventoryBlockInd, plant, product, storageLocation
+    Sample keys (first object): product, plant, storageLocation, physicalInventoryBlockInd, dateOfLastPostedCntUnRstrcdStk
+  File: part-20251119-133443-26.jsonl
+    Unique keys: dateOfLastPostedCntUnRstrcdStk, physicalInventoryBlockInd, plant, product, storageLocation
+    Sample keys (first object): product, plant, storageLocation, physicalInventoryBlockInd, dateOfLastPostedCntUnRstrcdStk
+  File: part-20251119-133443-270.jsonl
+    Unique keys: dateOfLastPostedCntUnRstrcdStk, physicalInventoryBlockInd, plant, product, storageLocation
+    Sample keys (first object): product, plant, storageLocation, physicalInventoryBlockInd, dateOfLastPostedCntUnRstrcdStk
+  File: part-20251119-133443-397.jsonl
+    Unique keys: dateOfLastPostedCntUnRstrcdStk, physicalInventoryBlockInd, plant, product, storageLocation
+    Sample keys (first object): product, plant, storageLocation, physicalInventoryBlockInd, dateOfLastPostedCntUnRstrcdStk
+  File: part-20251119-133443-6.jsonl
+    Unique keys: dateOfLastPostedCntUnRstrcdStk, physicalInventoryBlockInd, plant, product, storageLocation
+    Sample keys (first object): product, plant, storageLocation, physicalInventoryBlockInd, dateOfLastPostedCntUnRstrcdStk
+  File: part-20251119-133444-294.jsonl
+    Unique keys: dateOfLastPostedCntUnRstrcdStk, physicalInventoryBlockInd, plant, product, storageLocation
+    Sample keys (first object): product, plant, storageLocation, physicalInventoryBlockInd, dateOfLastPostedCntUnRstrcdStk
+  File: part-20251119-133444-415.jsonl
+    Unique keys: dateOfLastPostedCntUnRstrcdStk, physicalInventoryBlockInd, plant, product, storageLocation
+    Sample keys (first object): product, plant, storageLocation, physicalInventoryBlockInd, dateOfLastPostedCntUnRstrcdStk
+  File: part-20251119-133444-49.jsonl
+    Unique keys: dateOfLastPostedCntUnRstrcdStk, physicalInventoryBlockInd, plant, product, storageLocation
+    Sample keys (first object): product, plant, storageLocation, physicalInventoryBlockInd, dateOfLastPostedCntUnRstrcdStk
+  File: part-20251119-133444-881.jsonl
+    Unique keys: dateOfLastPostedCntUnRstrcdStk, physicalInventoryBlockInd, plant, product, storageLocation
+    Sample keys (first object): product, plant, storageLocation, physicalInventoryBlockInd, dateOfLastPostedCntUnRstrcdStk
+Folder: products
+  File: part-20251119-133438-390.jsonl
+    Unique keys: baseUnit, createdByUser, creationDate, crossPlantStatus, crossPlantStatusValidityDate, division, grossWeight, industrySector, isMarkedForDeletion, lastChangeDate, lastChangeDateTime, netWeight, product, productGroup, productOldId, productType, weightUnit
+    Sample keys (first object): product, productType, crossPlantStatus, crossPlantStatusValidityDate, creationDate, createdByUser, lastChangeDate, lastChangeDateTime, isMarkedForDeletion, productOldId, grossWeight, weightUnit, netWeight, productGroup, baseUnit, division, industrySector
+  File: part-20251119-133438-730.jsonl
+    Unique keys: baseUnit, createdByUser, creationDate, crossPlantStatus, crossPlantStatusValidityDate, division, grossWeight, industrySector, isMarkedForDeletion, lastChangeDate, lastChangeDateTime, netWeight, product, productGroup, productOldId, productType, weightUnit
+    Sample keys (first object): product, productType, crossPlantStatus, crossPlantStatusValidityDate, creationDate, createdByUser, lastChangeDate, lastChangeDateTime, isMarkedForDeletion, productOldId, grossWeight, weightUnit, netWeight, productGroup, baseUnit, division, industrySector
+Folder: sales_order_headers
+  File: part-20251119-133429-440.jsonl
+    Unique keys: createdByUser, creationDate, customerPaymentTerms, deliveryBlockReason, distributionChannel, headerBillingBlockReason, incotermsClassification, incotermsLocation1, lastChangeDateTime, organizationDivision, overallDeliveryStatus, overallOrdReltdBillgStatus, overallSdDocReferenceStatus, pricingDate, requestedDeliveryDate, salesGroup, salesOffice, salesOrder, salesOrderType, salesOrganization, soldToParty, totalCreditCheckStatus, totalNetAmount, transactionCurrency
+    Sample keys (first object): salesOrder, salesOrderType, salesOrganization, distributionChannel, organizationDivision, salesGroup, salesOffice, soldToParty, creationDate, createdByUser, lastChangeDateTime, totalNetAmount, overallDeliveryStatus, overallOrdReltdBillgStatus, overallSdDocReferenceStatus, transactionCurrency, pricingDate, requestedDeliveryDate, headerBillingBlockReason, deliveryBlockReason, incotermsClassification, incotermsLocation1, customerPaymentTerms, totalCreditCheckStatus
+Folder: sales_order_items
+  File: part-20251119-133429-452.jsonl
+    Unique keys: itemBillingBlockReason, material, materialGroup, netAmount, productionPlant, requestedQuantity, requestedQuantityUnit, salesDocumentRjcnReason, salesOrder, salesOrderItem, salesOrderItemCategory, storageLocation, transactionCurrency
+    Sample keys (first object): salesOrder, salesOrderItem, salesOrderItemCategory, material, requestedQuantity, requestedQuantityUnit, transactionCurrency, netAmount, materialGroup, productionPlant, storageLocation, salesDocumentRjcnReason, itemBillingBlockReason
+  File: part-20251119-133430-214.jsonl
+    Unique keys: itemBillingBlockReason, material, materialGroup, netAmount, productionPlant, requestedQuantity, requestedQuantityUnit, salesDocumentRjcnReason, salesOrder, salesOrderItem, salesOrderItemCategory, storageLocation, transactionCurrency
+    Sample keys (first object): salesOrder, salesOrderItem, salesOrderItemCategory, material, requestedQuantity, requestedQuantityUnit, transactionCurrency, netAmount, materialGroup, productionPlant, storageLocation, salesDocumentRjcnReason, itemBillingBlockReason
+Folder: sales_order_schedule_lines
+  File: part-20251119-133430-302.jsonl
+    Unique keys: confdOrderQtyByMatlAvailCheck, confirmedDeliveryDate, orderQuantityUnit, salesOrder, salesOrderItem, scheduleLine
+    Sample keys (first object): salesOrder, salesOrderItem, scheduleLine, confirmedDeliveryDate, orderQuantityUnit, confdOrderQtyByMatlAvailCheck
+  File: part-20251119-133430-979.jsonl
+    Unique keys: confdOrderQtyByMatlAvailCheck, confirmedDeliveryDate, orderQuantityUnit, salesOrder, salesOrderItem, scheduleLine
+    Sample keys (first object): salesOrder, salesOrderItem, scheduleLine, confirmedDeliveryDate, orderQuantityUnit, confdOrderQtyByMatlAvailCheck
